@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Gravity Parts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <img src="IMG/Logo.png" alt="Logo de Gravity Parts">
+        <div>
+            <h1>GRAVITY PARTS</h1>
+            <p><em>Los accesorios para tu bici</em></p>
+        </div>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="destacados.html">Destacados</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="carrito.html" aria-current="page">Carrito <span class="cart-count" data-cart-count>0</span></a>
+    </nav>
+
+    <main>
+        <section class="cart-section">
+            <p class="eyebrow">Tu selección</p>
+            <h2>Carrito de compras</h2>
+            <p class="cart-message" data-cart-message role="status" aria-live="polite"></p>
+            <div class="cart-content" data-cart-content></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Derechos reservados &copy; Gravity Parts</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse | Gravity Parts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <header class="site-header">
+        <img src="IMG/Logo.png" alt="Logo de Gravity Parts">
+        <div>
+            <h1>GRAVITY PARTS</h1>
+            <p><em>Los accesorios para tu bici</em></p>
+        </div>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="destacados.html">Destacados</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registrase.html" aria-current="page">Registrarse</a>
+    </nav>
+
+    <main>
+        <section class="login-section">
+            <div class="login-shell register-shell">
+                <div class="login-copy">
+                    <p class="eyebrow">Únete a Gravity Parts</p>
+                    <h2>Crea tu cuenta</h2>
+                    <p>Regístrate para gestionar tus pedidos, guardar tus productos favoritos y descubrir ofertas para tu bici.</p>
+                </div>
+
+                <form class="login-form register-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="first-name">Nombre</label>
+                        <input type="text" id="first-name" name="nombre" autocomplete="given-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Apellidos</label>
+                        <input type="text" id="last-name" name="apellidos" autocomplete="family-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-email">Correo electrónico</label>
+                        <input type="email" id="register-email" name="correo" placeholder="ejemplo@correo.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="telefono" autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" id="username" name="usuario" autocomplete="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-password">Contraseña</label>
+                        <input type="password" id="register-password" name="contrasena" autocomplete="new-password" required>
+                    </div>
+
+                    <div class="form-group register-confirm-group">
+                        <label for="confirm-password">Confirmar contraseña</label>
+                        <input type="password" id="confirm-password" name="confirmar_contrasena" autocomplete="new-password" required>
+                    </div>
+
+                    <label class="register-terms register-confirm-group">
+                        <input type="checkbox" name="acepta_terminos" required>
+                        <span>Acepto los <a href="terminos%20y%20condicciones.html" target="_blank" rel="noopener noreferrer">términos y condiciones</a>.</span>
+                    </label>
+
+                    <button type="submit" class="button login-button register-submit">Crear cuenta</button>
+                    <p class="signin-text register-signin">¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Derechos reservados &copy; Gravity Parts</p>
+    </footer>
+
+    <script>
+        const registerForm = document.querySelector(".register-form");
+        const password = document.querySelector("#register-password");
+        const passwordConfirmation = document.querySelector("#confirm-password");
+
+        function validatePasswordConfirmation() {
+            passwordConfirmation.setCustomValidity(
+                password.value === passwordConfirmation.value ? "" : "Las contraseñas no coinciden."
+            );
+        }
+
+        password.addEventListener("input", validatePasswordConfirmation);
+        passwordConfirmation.addEventListener("input", validatePasswordConfirmation);
+        registerForm.addEventListener("submit", validatePasswordConfirmation);
+    </script>
+</body>
+</html>
